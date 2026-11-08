@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/beibei/static/css/main.f855e6bc.css",
-    "main.js": "/beibei/static/js/main.c36a11f4.js",
+    "main.css": "/beibei/static/css/main.328dc5d3.css",
+    "main.js": "/beibei/static/js/main.52334e45.js",
     "static/js/453.9722e63a.chunk.js": "/beibei/static/js/453.9722e63a.chunk.js",
-    "static/media/logo.svg": "/beibei/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/05.PNG": "/beibei/static/media/05.fac76866f16d40aa5748.PNG",
+    "static/media/04.PNG": "/beibei/static/media/04.b4505b495a00bad76fc6.PNG",
+    "static/media/02.PNG": "/beibei/static/media/02.e195274d4adca8024002.PNG",
+    "static/media/03.PNG": "/beibei/static/media/03.248bc88a15766ab07b1f.PNG",
+    "static/media/01.PNG": "/beibei/static/media/01.9a54e7c304444bf16c61.PNG",
     "index.html": "/beibei/index.html",
-    "main.f855e6bc.css.map": "/beibei/static/css/main.f855e6bc.css.map",
-    "main.c36a11f4.js.map": "/beibei/static/js/main.c36a11f4.js.map",
+    "main.328dc5d3.css.map": "/beibei/static/css/main.328dc5d3.css.map",
+    "main.52334e45.js.map": "/beibei/static/js/main.52334e45.js.map",
     "453.9722e63a.chunk.js.map": "/beibei/static/js/453.9722e63a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.c36a11f4.js"
+    "static/css/main.328dc5d3.css",
+    "static/js/main.52334e45.js"
   ]
 }
