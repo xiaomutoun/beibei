@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import GuessHero from './components/GuessHero';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Oh my beibei
-        </p>
+        <p>看图猜英雄</p>
+        <GuessHero />
       </header>
     </div>
   );
