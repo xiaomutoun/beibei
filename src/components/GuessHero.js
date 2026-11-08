@@ -108,7 +108,7 @@ function GuessHero() {
   return (
     <section className="guess-hero-card">
       <div className="guess-hero-header">
-        <span className="guess-hero-badge">看图猜英雄</span>
+        <span className="guess-hero-badge">下面是LOL里英雄立绘的一角，猜猜是哪位英雄吧</span>
         <span className="guess-hero-counter">
           {currentQuestion.prompt} / {questions.length}
         </span>
@@ -124,7 +124,7 @@ function GuessHero() {
 
       <form className="guess-hero-form" onSubmit={handleSubmit}>
         <label htmlFor="hero-guess" className="guess-hero-label">
-          你的答案
+          爷的答案
         </label>
         <div className="guess-hero-input-row">
           <input
