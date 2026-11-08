@@ -135,9 +135,6 @@ function GuessHero() {
             placeholder="输入英雄名字"
             className="guess-hero-input"
           />
-          <button type="submit" className="guess-hero-submit">
-            提交
-          </button>
         </div>
       </form>
 
