@@ -68,7 +68,7 @@ function GuessHero() {
     return (
       <section className="guess-hero-card review-mode">
         <div className="guess-hero-header">
-          <span className="guess-hero-badge">最终回顾</span>
+          <span className="guess-hero-badge">都猜中了吗 快截图把结果告诉我吧~</span>
         </div>
 
         <div className="guess-hero-review-list">
