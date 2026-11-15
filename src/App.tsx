@@ -5,7 +5,7 @@ import GuessHero from './pages/GuessHero';
 import LearnCoding from './pages/LearnCoding';
 
 function App() {
-  const [activePage, setActivePage] = useState<'guessHero' | 'learnCoding'>('learnCoding');
+  const [activePage, setActivePage] = useState<'guessHero' | 'learnCoding'>('guessHero');
 
   return (
     <div className="App">
