@@ -155,6 +155,97 @@
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
 }
 
+.learn-coding-quiz {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.learn-coding-quiz h2 {
+  margin: 0 0 14px;
+  color: #f1f5f9;
+  font-size: 1.2rem;
+}
+
+.learn-coding-quiz fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.learn-coding-quiz legend {
+  margin-bottom: 12px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.learn-coding-quiz-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.learn-coding-quiz-option {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.learn-coding-quiz-option input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 8px;
+  background: #0f172a;
+  color: #f8fafc;
+  font: inherit;
+}
+
+.learn-coding-quiz-option input:focus {
+  border-color: #38bdf8;
+  outline: 2px solid rgba(56, 189, 248, 0.35);
+}
+
+.learn-coding-quiz-submit {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: #082f49;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.learn-coding-quiz-submit:focus-visible,
+.learn-coding-quiz-option input:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 3px;
+}
+
+.App-header .learn-coding-quiz-feedback {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  color: #86efac;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
 .guess-hero-card {
   width: min(100%, 520px);
   background: rgba(15, 23, 42, 0.82);

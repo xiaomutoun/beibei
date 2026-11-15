@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
@@ -56,6 +57,24 @@ else:
 ];
 
 function LearnCoding() {
+  const [answers, setAnswers] = useState(['', '', '', '', '']);
+  const [feedback, setFeedback] = useState<'correct' | 'incorrect' | 'unanswered' | null>(null);
+
+  const handleQuizSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (answers.some((answer) => answer.trim() === '')) {
+      setFeedback('unanswered');
+      return;
+    }
+
+    const expectedAnswers = ['2020', 'EDG', '2022', 'BLG', 'T1'];
+    const allCorrect = answers.every(
+      (answer, index) => answer.trim() === expectedAnswers[index],
+    );
+    setFeedback(allCorrect ? 'correct' : 'incorrect');
+  };
+
   return (
     <section className="learn-coding-page">
       <header className="learn-coding-intro">
@@ -95,6 +114,70 @@ function LearnCoding() {
           </article>
         ))}
       </div>
+
+      <section className="learn-coding-quiz" aria-labelledby="learn-coding-quiz-title">
+        <h2 id="learn-coding-quiz-title">小测验</h2>
+        <form onSubmit={handleQuizSubmit}>
+          <fieldset>
+            <legend>下面代码根据用户的输入年份来输出谁是世界冠军，5个&lt;填空&gt;的地方分别该填入什么呢？</legend>
+            <SyntaxHighlighter
+              className="learn-coding-codeblock learn-coding-quiz-codeblock"
+              language="python"
+              style={vscDarkPlus}
+              customStyle={{
+                background: '#020617',
+                borderRadius: '12px',
+                fontSize: '0.88rem',
+                lineHeight: 1.6,
+                margin: '0 0 12px',
+                overflowX: 'auto',
+                padding: '16px',
+                textAlign: 'left',
+              }}
+            >
+              {`print("S10以后，谁是世界冠军呢？")
+year = int(input()) # 用户输入一个年份，这个年份介于2020到2026之间
+if year == <填空1>:
+    print("DWG")
+elif year == 2021:
+    print("<填空2>")
+elif year == <填空3>:
+    print("DRX")
+elif year == 2026:
+    print("<填空4>")
+else:
+    print("<填空5>")`}
+            </SyntaxHighlighter>
+            <div className="learn-coding-quiz-inputs">
+              {answers.map((answer, index) => (
+                <label className="learn-coding-quiz-option" key={index}>
+                  <span>&lt;填空 {index + 1}&gt;</span>
+                  <input
+                    type="text"
+                    value={answer}
+                    aria-label={`填空 ${index + 1}`}
+                    autoComplete="off"
+                    onChange={(event) => {
+                      const nextAnswers = [...answers];
+                      nextAnswers[index] = event.target.value;
+                      setAnswers(nextAnswers);
+                      setFeedback(null);
+                    }}
+                  />
+                </label>
+              ))}
+            </div>
+          </fieldset>
+          <button type="submit" className="learn-coding-quiz-submit">
+            检查答案
+          </button>
+          <p className="learn-coding-quiz-feedback" aria-live="polite">
+            {feedback === 'correct' && '全对了！好棒！！！'}
+            {feedback === 'incorrect' && '不全对喔！再好好想想，要注意大小写。'}
+            {feedback === 'unanswered' && '请填写全部 5 个空再提交。'}
+          </p>
+        </form>
+      </section>
     </section>
   );
 }
