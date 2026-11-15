@@ -10,7 +10,17 @@ import a3 from '../assets/answers/03.PNG';
 import a4 from '../assets/answers/04.PNG';
 import a5 from '../assets/answers/05.PNG';
 
-const questions = [
+type Question = {
+  id: number;
+  image: string;
+  answerImage: string;
+  answer: string;
+  prompt: string;
+};
+
+type AnswersMap = Record<number, string>;
+
+const questions: Question[] = [
   { id: 1, image: q1, answerImage: a1, answer: '英雄一', prompt: '第一题' },
   { id: 2, image: q2, answerImage: a2, answer: '英雄二', prompt: '第二题' },
   { id: 3, image: q3, answerImage: a3, answer: '英雄三', prompt: '第三题' },
@@ -19,16 +29,16 @@ const questions = [
 ];
 
 function GuessHero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [message, setMessage] = useState('');
-  const [reviewMode, setReviewMode] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [answers, setAnswers] = useState<AnswersMap>({});
+  const [message, setMessage] = useState<string>('');
+  const [reviewMode, setReviewMode] = useState<boolean>(false);
 
-  const currentQuestion = useMemo(() => questions[currentIndex], [currentIndex]);
+  const currentQuestion = useMemo<Question>(() => questions[currentIndex], [currentIndex]);
   const currentAnswer = answers[currentQuestion.id] ?? '';
   const allAnswered = questions.every((question) => (answers[question.id] ?? '').trim() !== '');
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const nextValue = event.target.value;
     setAnswers((previous) => ({
       ...previous,
@@ -37,7 +47,7 @@ function GuessHero() {
     setMessage('');
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const normalizedGuess = currentAnswer.trim();
