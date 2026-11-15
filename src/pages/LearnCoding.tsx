@@ -13,7 +13,7 @@ const lessons = [
       },
       {
         language: 'python',
-        description: '上面代码里的#是注释，程序运行时会忽略它。注释只是给人看的。',
+        description: '上面代码里的#是注释符号，程序运行时会忽略它后面的内容。注释只是给人看的。',
         code: `################### 我是一行很长的注释 ###################`,
       },
     ],
@@ -32,7 +32,7 @@ print(x) # 输出结果是16`,
         description: '使用变量是为了后面可以重复使用，比如可以用到print里。',
         code: `game = "英雄联盟"
 print("我爱玩" + game) # 输出结果是：我爱玩英雄联盟
-print(game + "真好玩") # 输出结果是：英雄联盟真好玩;`,
+print(game + "真好玩") # 输出结果是：英雄联盟真好玩`,
       },
     ],
   },
@@ -44,7 +44,7 @@ print(game + "真好玩") # 输出结果是：英雄联盟真好玩;`,
         description: 'if条件语句可以根据不同的条件执行不同的代码，如果条件成立就执行if下面的代码，否则就执行else下面的代码。elif是else if的缩写，表示如果上面的条件不成立，就判断elif的条件是否成立。',
         code: `time = 18
 if time > 17:
-    print("该下班啦") # 如果time小于17，就会输出：该下班啦
+    print("该下班啦") # 如果time大于17，就会输出：该下班啦
 elif time == 17:
     print("准备要下班啦") # 如果time等于17，就会输出：准备要下班啦
 else:
@@ -119,7 +119,7 @@ function LearnCoding() {
         <h2 id="learn-coding-quiz-title">小测验</h2>
         <form onSubmit={handleQuizSubmit}>
           <fieldset>
-            <legend>下面代码根据用户的输入年份来输出谁是世界冠军，5个&lt;填空&gt;的地方分别该填入什么呢？</legend>
+            <legend>下面代码根据用户输入的年份来输出谁是世界冠军，5个&lt;填空&gt;的地方分别该填入什么呢？</legend>
             <SyntaxHighlighter
               className="learn-coding-codeblock learn-coding-quiz-codeblock"
               language="python"
