@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/beibei/static/css/main.cff2140f.css",
-    "main.js": "/beibei/static/js/main.6003c0fe.js",
+    "main.js": "/beibei/static/js/main.dd05997a.js",
     "static/js/453.883984d6.chunk.js": "/beibei/static/js/453.883984d6.chunk.js",
     "static/media/05.PNG": "/beibei/static/media/05.fac76866f16d40aa5748.PNG",
     "static/media/04.PNG": "/beibei/static/media/04.b4505b495a00bad76fc6.PNG",
@@ -10,11 +10,11 @@
     "static/media/01.PNG": "/beibei/static/media/01.9a54e7c304444bf16c61.PNG",
     "index.html": "/beibei/index.html",
     "main.cff2140f.css.map": "/beibei/static/css/main.cff2140f.css.map",
-    "main.6003c0fe.js.map": "/beibei/static/js/main.6003c0fe.js.map",
+    "main.dd05997a.js.map": "/beibei/static/js/main.dd05997a.js.map",
     "453.883984d6.chunk.js.map": "/beibei/static/js/453.883984d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cff2140f.css",
-    "static/js/main.6003c0fe.js"
+    "static/js/main.dd05997a.js"
   ]
 }
