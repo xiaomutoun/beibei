@@ -23,7 +23,7 @@ const lessons = [
     examples: [
       {
         language: 'python',
-        description: '变量是用来保存数据的，就跟小时候学的方程变量差不多。',
+        description: '变量是用来保存数据的，就跟小时候学的方程变量差不多。等号"="是赋值符号，表示把右边的值赋给左边的变量。',
         code: `x = 16
 print(x) # 输出结果是16`,
       },
@@ -45,7 +45,7 @@ print(game + "真好玩") # 输出结果是：英雄联盟真好玩`,
         code: `time = 18
 if time > 17:
     print("该下班啦") # 如果time大于17，就会输出：该下班啦
-elif time == 17:
+elif time == 17: # 双等号"=="是判断是否相等的符号
     print("准备要下班啦") # 如果time等于17，就会输出：准备要下班啦
 else:
     print("还不到下班的时间哦") # 否则，就会输出：还不到下班的时间哦
