@@ -24,6 +24,25 @@ test('opens the coding tutorials from the navigation', () => {
   expect(screen.getAllByRole('textbox')).toHaveLength(5);
 });
 
+test('opens the Election page from the Others dropdown', () => {
+  render(<App />);
+
+  fireEvent.click(screen.getByRole('button', { name: /杂谈/i }));
+  fireEvent.click(screen.getByRole('menuitem', { name: /election/i }));
+
+  expect(screen.getByRole('heading', { name: /枫丹独家报道：水之国的最后一场审判/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /第一幕：最高审判官的宣告/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /第二幕：蒸汽鸟报的头版/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /第三幕：候选人的资格/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /枫丹总统选举资格法案/i })).toBeInTheDocument();
+  expect(screen.queryAllByRole('article')).toHaveLength(3);
+  fireEvent.click(screen.getByRole('button', { name: /下一幕：爷来看看都有谁来参选/i }));
+  expect(screen.getAllByRole('article')).toHaveLength(5);
+  fireEvent.click(screen.getByRole('button', { name: /返回故事/i }));
+  expect(screen.getByRole('heading', { name: /第一幕：最高审判官的宣告/i })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /杂谈/i })).toHaveAttribute('aria-current', 'page');
+});
+
 test('requires all five answers and reports whether they are correct', () => {
   render(<App />);
 
