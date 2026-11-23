@@ -301,6 +301,36 @@
   gap: 16px;
 }
 
+.election-candidates-intro {
+  margin: 0 0 18px;
+  padding: 16px 20px;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(15, 23, 42, 0.72));
+  text-align: center;
+}
+
+.election-candidates-intro h2 {
+  margin: 4px 0 7px;
+  color: #f1f5f9;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+}
+
+.election-candidates-intro p {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.election-candidates-intro .election-candidates-eyebrow {
+  color: #7dd3fc;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .election-candidate {
   padding: 20px;
   border: 1px solid rgba(148, 163, 184, 0.3);
@@ -345,6 +375,92 @@
   color: #cbd5e1;
   font-size: 0.9rem;
   line-height: 1.65;
+}
+
+.election-position-guess {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.72);
+  text-align: center;
+}
+
+.election-position-guess h2 {
+  margin: 0 0 8px;
+  color: #f1f5f9;
+  font-size: 1.2rem;
+}
+
+.election-position-guess-intro {
+  margin: 0 0 16px;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.election-position-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.election-position-choice {
+  min-width: 0;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  background: rgba(2, 6, 23, 0.35);
+}
+
+.election-position-choice legend {
+  padding: 0 6px;
+  color: #e2e8f0;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.election-position-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  color: #cbd5e1;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.election-position-option input {
+  accent-color: #38bdf8;
+}
+
+.election-position-result {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.election-position-result.correct {
+  color: #86efac;
+}
+
+.election-position-result.incorrect {
+  color: #fca5a5;
+}
+
+.App-header .election-position-score {
+  margin: 12px 0 0;
+  color: #7dd3fc;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.App-header .election-position-score-incorrect {
+  color: #f87171;
 }
 
 .learn-coding-page {

@@ -53,7 +53,7 @@ function Navlinks({ activePage, onSelect }: NavlinksProps) {
                 setIsOthersOpen(false);
               }}
             >
-              Election
+              枫丹大选
             </button>
           </div>
         )}
