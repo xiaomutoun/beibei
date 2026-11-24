@@ -7,7 +7,7 @@ import Election from './pages/Election';
 import Others from './pages/Others';
 
 function App() {
-  const [activePage, setActivePage] = useState<'guessHero' | 'learnCoding' | 'others' | 'election'>('learnCoding');
+  const [activePage, setActivePage] = useState<'guessHero' | 'learnCoding' | 'others' | 'election'>('election');
 
   return (
     <div className="App">
